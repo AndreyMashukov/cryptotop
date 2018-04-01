@@ -1,0 +1,4345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b25815f649","applicationID":"3889467","transactionName":"JlcNRxRfX19REU5SXgxWEBwPXldWTA==","queueTime":1,"applicationTime":355,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <title>
+      WhatToMine - Crypto coins mining profit calculator compared to Ethereum
+    </title>
+    <meta name="description" content="Using WhatToMine you can check, how profitable it is to mine selected altcoins in comparison to ethereum or bitcoin">
+    <meta name="keywords" content="Mining Calculator Bitcoin Ethereum Zcash X11 Blake">
+    <link rel="stylesheet" media="all" href="/assets/application-fba3d0f60d35607aedb174ea4ca9ba63ac319ff56e5278e1a641d9a1298ef42a.css" />
+    <script src="/assets/application-2434aeba8b5fe02b5c3f32d0bbcb957db3ddbf39ba8450922d441eca899c2106.js"></script>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Hv0sOIXJUfr3udmhsBR18PzoHw9RZ/VQOfy+JwCPC8OFvE+jy8XyGwn1yW/857H6YtV3zETwNugNTiq4jAXrSA==" />
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49963845-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class=lower>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="tickers">
+      <ul class="nav navbar-nav">
+        <li>
+          <img width="20px" class="ticker-image" title="Bitcoin" src="https://images.whattomine.com/coins/logos/000/000/001/thumb/btclogo.png?1486175435" alt="Btclogo" />
+          $13,847.00
+        </li>
+          <li>
+            <img width="20px" class="ticker-image" title="Litecoin" src="https://images.whattomine.com/coins/logos/000/000/004/thumb/litecoin-logo.png?1486175484" alt="Litecoin logo" />
+            $235.71
+          </li>
+          <li>
+            <img width="20px" class="ticker-image" title="Dash" src="https://images.whattomine.com/coins/logos/000/000/034/thumb/dash-darkcoin.png?1486175489" alt="Dash darkcoin" />
+            $1,056.44
+          </li>
+          <li>
+            <img width="20px" class="ticker-image" title="Monero" src="https://images.whattomine.com/coins/logos/000/000/101/thumb/monero.png?1486175477" alt="Monero" />
+            $384.20
+          </li>
+          <li>
+            <img width="20px" class="ticker-image" title="Ethereum" src="https://images.whattomine.com/coins/logos/000/000/151/thumb/eth.png?1486214743" alt="Eth" />
+            $1,327.37
+          </li>
+          <li>
+            <img width="20px" class="ticker-image" title="Zcash" src="https://images.whattomine.com/coins/logos/000/000/166/thumb/zec.png?1486175433" alt="Zec" />
+            $660.78
+          </li>
+          <li>
+            <img width="20px" class="ticker-image" title="EthereumClassic" src="https://images.whattomine.com/coins/logos/000/000/162/thumb/etc3.png?1496094431" alt="Etc3" />
+            $36.56
+          </li>
+      </ul>
+    </div>
+    <div style="float: right; margin-top: 10px; margin-bottom: -10px">
+      <a href="https://twitter.com/WhatToMine" class="twitter-follow-button" data-show-count="true">
+        Follow @WhatToMine
+      </a>
+      <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));</script>
+    </div>
+  </div>
+  <nav>
+    <div class="container">
+      <div class="navbar-header">
+        <a id="logo" class="navbar-brand" href="/coins">What To Mine</a>
+      </div>
+      <ul class="nav nav-tabs pull-left stick-bottom primary">
+        <li class="active"><a href="/coins">GPU</a></li>
+        <li class=""><a href="/asic">ASIC</a></li>
+        <li class="">
+          <a href="/calculators">Coins</a>
+          <h6 class="label-new">
+            <span class="label label-danger">New</span>
+          </h6>
+        </li>
+        <li class="">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            ETH+
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/merged_coins/1-eth-dcr">ETH+DCR</a></li>
+            <li><a href="/merged_coins/2-eth-sc">ETH+SC</a></li>
+            <li><a href="/merged_coins/7-eth-lbc">ETH+LBC</a></li>
+            <li><a href="/merged_coins/10-eth-pasc">ETH+PASC</a></li>
+            <li><a href="/merged_coins/13-eth-pasl">ETH+PASL</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            ETC+
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/merged_coins/3-etc-dcr">ETC+DCR</a></li>
+            <li><a href="/merged_coins/4-etc-sc">ETC+SC</a></li>
+            <li><a href="/merged_coins/8-etc-lbc">ETC+LBC</a></li>
+            <li><a href="/merged_coins/11-etc-pasc">ETC+PASC</a></li>
+            <li><a href="/merged_coins/14-etc-pasl">ETC+PASL</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            EXP+
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/merged_coins/5-exp-dcr">EXP+DCR</a></li>
+            <li><a href="/merged_coins/6-exp-sc">EXP+SC</a></li>
+            <li><a href="/merged_coins/9-exp-lbc">EXP+LBC</a></li>
+            <li><a href="/merged_coins/12-exp-pasc">EXP+PASC</a></li>
+            <li><a href="/merged_coins/15-exp-pasl">EXP+PASL</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav nav-tabs pull-right stick-bottom primary">
+        <li>
+        </li>
+          <li><a href="/coins.json">JSON</a></li>
+        <li class="">
+          <a href="/contacts/new">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+      <div class="navbar-default">
+        <div class="container">
+          <ul class="nav nav-tabs secondary navbar-left">
+          </ul>
+
+          <form class="navbar-form navbar-right add-dataset" action="/create_dataset?prefix=index" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="XI8tIx6nd5/XloBMioVOKoGsprMWHF4dLrkmNlC4WmBKJIQGM2V5+qKTaU/mYnwdGKHEjpFxfPa2uHwOTosUmA==" />
+            <div class="input-group">
+              <input type="text" name="dataset" id="dataset" value="" class="form-control" placeholder="Add new dataset" />
+              <span class="input-group-btn">
+                <input type="submit" name="commit" value="Add" class="btn btn-default" data-disable-with="Add" />
+              </span>
+            </div>
+</form>        </div>
+      </div>
+  </nav>
+</header>
+
+    <div class="container">
+      <script async src='//appsha1.cointraffic.io/js/?wkey=YgxBHL'></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2477602342455493",
+        enable_page_level_ads: true
+      });
+    </script>
+
+<div class="margin-bot-10">
+  <div class="centered-image"><!-- list_banner_top -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-2477602342455493"
+           data-ad-slot="6419161569"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</div>
+
+<form class="new_factor" id="new_factor" action="/coins" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_280x" id="adapt_q_280x" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_280x" id="adapt_280x" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 280x<br><br>Using 1100/1500 with 0.1V undervolt"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          280x
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_380" id="adapt_q_380" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_380" id="adapt_380" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 380<br><br>Using 1000/1500 with 0.1V undervolt"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          380
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_fury" id="adapt_q_fury" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_fury" id="adapt_fury" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of Fury<br><br>Using 1020/500 with 0.1V undervolt"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          Fury
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_470" id="adapt_q_470" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_470" id="adapt_470" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 470 4GB<br><br>Using 1050/1870 with 0.2V undervolt and ETH bios mod"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          470
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_480" id="adapt_q_480" value="3" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_480" id="adapt_480" value="true" hidden="hidden" class="adapt" checked="checked" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 480 8GB<br><br>Using 1150/2150 with 0.2V undervolt and ETH bios mod"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          480
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_570" id="adapt_q_570" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_570" id="adapt_570" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 570 4GB<br><br>Using 1100/2000 with 0.2V undervolt and ETH bios mod"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          570
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_580" id="adapt_q_580" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_580" id="adapt_580" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 580 8GB<br><br>Using 1150/2150 with 0.2V undervolt and ETH bios mod"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          580
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_vega56" id="adapt_q_vega56" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_vega56" id="adapt_vega56" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of Vega 56<br><br>Using 950/900 with 0.95V and blockchain driver"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          Vega56
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_vega64" id="adapt_q_vega64" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-amd">
+      <label>
+        <input type="checkbox" name="adapt_vega64" id="adapt_vega64" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of Vega 64<br><br>Using 950/1020 with 0.975V and blockchain driver"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          Vega64
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_750Ti" id="adapt_q_750Ti" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_750Ti" id="adapt_750Ti" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 750Ti<br><br>Using 1350/1500 with 100% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          750Ti
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_1050Ti" id="adapt_q_1050Ti" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_1050Ti" id="adapt_1050Ti" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 1050Ti<br><br>Using +150/+500 with 75% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          1050Ti
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_10606" id="adapt_q_10606" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_10606" id="adapt_10606" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 1060 6GB<br><br>Using +150/+500 with 65% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          1060
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_1070" id="adapt_q_1070" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_1070" id="adapt_1070" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 1070<br><br>Using +150/+500 with 65% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          1070
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_1080" id="adapt_q_1080" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_1080" id="adapt_1080" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 1080<br><br>Using +150/+500 with 65% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          1080
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" name="adapt_q_1080Ti" id="adapt_q_1080Ti" value="0" class="form-control input-sm adapt-quantity" />
+    <div class="input-group-btn hash-adapt ck-button-nv">
+      <label>
+        <input type="checkbox" name="adapt_1080Ti" id="adapt_1080Ti" value="true" hidden="hidden" class="adapt" />
+        <span class="btn btn-default btn-sm popover-as-title"
+          data-content="Insert hash rates and powers for a number of 1080Ti<br><br>Using +150/+500 with 65% TDP"
+          data-placement="bottom" data-trigger="hover" data-html="true">
+          1080Ti
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 10px">
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="eth" id="eth" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Ethash"
+      data-placement="bottom" data-trigger="hover">
+      Ethash
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="84.0" name="factor[eth_hr]" id="factor_eth_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="405.0" name="factor[eth_p]" id="factor_eth_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Ethash daily cost" id="Ethash_daily_cost" value="$0.97" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="grof" id="grof" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Groestl"
+      data-placement="bottom" data-trigger="hover">
+      Groestl
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="63.9" name="factor[gro_hr]" id="factor_gro_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="450.0" name="factor[gro_p]" id="factor_gro_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Groestl daily cost" id="Groestl_daily_cost" value="$1.08" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="x11gf" id="x11gf" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include X11Gost"
+      data-placement="bottom" data-trigger="hover">
+      X11Gost
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="20.1" name="factor[x11g_hr]" id="factor_x11g_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="420.0" name="factor[x11g_p]" id="factor_x11g_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="X11Gost daily cost" id="X11Gost_daily_cost" value="$1.01" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="cn" id="cn" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include CryptoNight"
+      data-placement="bottom" data-trigger="hover">
+      CryptoNight
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="2190.0" name="factor[cn_hr]" id="factor_cn_hr" />
+  <div class="input-group-addon">
+    h/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="330.0" name="factor[cn_p]" id="factor_cn_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="CryptoNight daily cost" id="CryptoNight_daily_cost" value="$0.79" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="eq" id="eq" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Equihash"
+      data-placement="bottom" data-trigger="hover">
+      Equihash
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="870.0" name="factor[eq_hr]" id="factor_eq_hr" />
+  <div class="input-group-addon">
+    h/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="360.0" name="factor[eq_p]" id="factor_eq_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Equihash daily cost" id="Equihash_daily_cost" value="$0.86" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="lre" id="lre" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Lyra2REv2"
+      data-placement="bottom" data-trigger="hover">
+      Lyra2REv2
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="14700.0" name="factor[lrev2_hr]" id="factor_lrev2_hr" />
+  <div class="input-group-addon">
+    kh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="390.0" name="factor[lrev2_p]" id="factor_lrev2_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Lyra2REv2 daily cost" id="Lyra2REv2_daily_cost" value="$0.94" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="ns" id="ns" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include NeoScrypt"
+      data-placement="bottom" data-trigger="hover">
+      NeoScrypt
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="1950.0" name="factor[ns_hr]" id="factor_ns_hr" />
+  <div class="input-group-addon">
+    kh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="450.0" name="factor[ns_p]" id="factor_ns_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="NeoScrypt daily cost" id="NeoScrypt_daily_cost" value="$1.08" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="lbry" id="lbry" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include LBRY"
+      data-placement="bottom" data-trigger="hover">
+      LBRY
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="315.0" name="factor[lbry_hr]" id="factor_lbry_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="525.0" name="factor[lbry_p]" id="factor_lbry_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="LBRY daily cost" id="LBRY_daily_cost" value="$1.26" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3" style="margin-top: 15px">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="bk2bf" id="bk2bf" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Blake (2b)"
+      data-placement="bottom" data-trigger="hover">
+      Blake (2b)
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="3450.0" name="factor[bk2b_hr]" id="factor_bk2b_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="630.0" name="factor[bk2b_p]" id="factor_bk2b_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Blake (2b) daily cost" id="Blake__2b__daily_cost" value="$1.51" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="bk14" id="bk14" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Blake (14r)"
+      data-placement="bottom" data-trigger="hover">
+      Blake (14r)
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="5910.0" name="factor[bk14_hr]" id="factor_bk14_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="570.0" name="factor[bk14_p]" id="factor_bk14_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Blake (14r) daily cost" id="Blake__14r__daily_cost" value="$1.37" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3" style="margin-top: 15px">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="pas" id="pas" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Pascal"
+      data-placement="bottom" data-trigger="hover">
+      Pascal
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="2100.0" name="factor[pas_hr]" id="factor_pas_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="405.0" name="factor[pas_p]" id="factor_pas_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Pascal daily cost" id="Pascal_daily_cost" value="$0.97" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+
+        <div class="col-xs-6">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="skh" id="skh" value="true" hidden="hidden" checked="checked" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Skunkhash"
+      data-placement="bottom" data-trigger="hover">
+      Skunkhash
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="54.0" name="factor[skh_hr]" id="factor_skh_hr" />
+  <div class="input-group-addon">
+    Mh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="345.0" name="factor[skh_p]" id="factor_skh_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Skunkhash daily cost" id="Skunkhash_daily_cost" value="$0.83" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6" style="margin-top: 15px">
+      <div class="row">
+        <div class="col-xs-3 hidden">
+          <div class="ck-button">
+  <label>
+    <input type="checkbox" name="l2z" id="l2z" value="true" hidden="hidden" />
+    <span class="btn btn-default popover-as-title"
+      data-content="Include Lyra2z"
+      data-placement="bottom" data-trigger="hover">
+      Lyra2z
+    </span>
+  </label>
+</div>
+
+<label class="small_form" for="hash_rate">Hash rate</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="420.0" name="factor[l2z_hr]" id="factor_l2z_hr" />
+  <div class="input-group-addon">
+    kh/s
+  </div>
+</div>
+<label class="small_form" for="power">Power</label>
+<div class="input-group">
+  <input class="form-control input-sm" type="text" value="300.0" name="factor[l2z_p]" id="factor_l2z_p" />
+  <div class="input-group-addon">
+    W
+  </div>
+</div>
+<label class="small_form" for="daily_cost">Daily cost</label>
+<div class="input">
+  <input type="text" name="Lyra2z daily cost" id="Lyra2z_daily_cost" value="$0.72" disabled="disabled" class="form-control input-sm" />
+</div>
+
+        </div>
+
+        <div class="col-xs-9" style="margin-top: -10px">
+          <div class="row">
+  <div class="col-xs-6">
+    <label for="factor_cost">Cost</label>
+    <div class="input-group">
+      <input class="form-control input-sm" type="text" value="0.1" name="factor[cost]" id="factor_cost" />
+      <div class="input-group-addon">
+        $/kWh
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <label for="factor_sort_by">Sort by</label>
+    <select name="sort" id="sort" class="chosen-select"><option value="Difficulty">Difficulty</option>
+<option value="NetHash">NetHash</option>
+<option value="MarketCap">Market Cap</option>
+<option value="ExchangeVolume">Exchange Volume</option>
+<option value="Revenue">Current revenue</option>
+<option value="Profit">Current profit</option>
+<option selected="selected" value="Profitability24">Profitability 24h</option>
+<option value="Profitability3">Profitability 3 days</option>
+<option value="Profitability7">Profitability 7 days</option></select>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 5px">
+  <div class="col-xs-6">
+    <label for="factor_volume_filter">Volume filter</label>
+    <select name="volume" id="volume" class="chosen-select"><option value="0">Any volume</option>
+<option value="0_1">Volume &gt; 0.1</option>
+<option value="0_5">Volume &gt; 0.5</option>
+<option value="1">Volume &gt; 1</option>
+<option value="5">Volume &gt; 5</option>
+<option value="10">Volume &gt; 10</option>
+<option value="50">Volume &gt; 50</option>
+<option value="100">Volume &gt; 100</option></select>
+  </div>
+  <div class="col-xs-6">
+    <label for="factor_difficulty_for_revenue">Difficulty for revenue</label>
+    <select name="revenue" id="revenue" class="chosen-select"><option value="current">Current difficulty</option>
+<option selected="selected" value="24h">Average last 24h</option>
+<option value="3d">Average last 3 days</option>
+<option value="7d">Average last 7 days</option></select>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 5px">
+  <div class="col-xs-12">
+    <label for="factor_selected_exchanges">Selected exchanges</label>
+    <input name="factor[exchanges][]" type="hidden" value="" /><select class="chosen-select" multiple="multiple" name="factor[exchanges][]" id="factor_exchanges"><option selected="selected" value="abucoins">Abucoins</option>
+<option selected="selected" value="bitfinex">Bitfinex</option>
+<option selected="selected" value="bittrex">Bittrex</option>
+<option selected="selected" value="bleutrade">Bleutrade</option>
+<option selected="selected" value="cryptopia">Cryptopia</option>
+<option selected="selected" value="hitbtc">HitBTC</option>
+<option selected="selected" value="poloniex">Poloniex</option>
+<option selected="selected" value="yobit">YoBit</option></select>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 5px">
+  <input type="hidden" name="dataset" id="dataset" />
+  <div class="col-xs-6">
+    <input type="submit" name="commit" value="Calculate" class="btn btn-primary btn-block" data-disable-with="Calculate" />
+  </div>
+  <div class="col-xs-6">
+    <a href=/coins?adapt_q_480=3&amp;adapt_480=true&amp;eth=true&amp;factor[eth_hr]=84.0&amp;factor[eth_p]=405.0&amp;grof=true&amp;factor[gro_hr]=63.9&amp;factor[gro_p]=450.0&amp;x11gf=true&amp;factor[x11g_hr]=20.1&amp;factor[x11g_p]=420.0&amp;cn=true&amp;factor[cn_hr]=2190.0&amp;factor[cn_p]=330.0&amp;eq=true&amp;factor[eq_hr]=870.0&amp;factor[eq_p]=360.0&amp;lre=true&amp;factor[lrev2_hr]=14700.0&amp;factor[lrev2_p]=390.0&amp;ns=true&amp;factor[ns_hr]=1950.0&amp;factor[ns_p]=450.0&amp;lbry=true&amp;factor[lbry_hr]=315.0&amp;factor[lbry_p]=525.0&amp;bk2bf=true&amp;factor[bk2b_hr]=3450.0&amp;factor[bk2b_p]=630.0&amp;bk14=true&amp;factor[bk14_hr]=5910.0&amp;factor[bk14_p]=570.0&amp;pas=true&amp;factor[pas_hr]=2100.0&amp;factor[pas_p]=405.0&amp;skh=true&amp;factor[skh_hr]=54.0&amp;factor[skh_p]=345.0&amp;factor[cost]=0.1&amp;sort=Profitability24&amp;volume=0&amp;revenue=24h&amp;factor[exchanges][]=&amp;factor[exchanges][]=abucoins&amp;factor[exchanges][]=bitfinex&amp;factor[exchanges][]=bittrex&amp;factor[exchanges][]=bleutrade&amp;factor[exchanges][]=cryptopia&amp;factor[exchanges][]=hitbtc&amp;factor[exchanges][]=poloniex&amp;factor[exchanges][]=yobit&amp;dataset= class="btn btn-info btn-block">Defaults</a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+<h4 class="text-justify">Using below table, you can check how profitable it is to mine selected altcoins in comparison to ethereum. Please note that calculations are based on mean values, therefore your final results may vary. For best results fill all fields with your hash rate and power consumption. Input Groestl hash rate, not Myriad-Groestl. Default values are adapted for three 480 cards.</h4>
+
+<div class="centered-image"><!-- list_banner_mid -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-2477602342455493"
+           data-ad-slot="8129567165"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+<table class="table table-hover table-vcenter">
+  <thead>
+    <tr>
+      <th>Name(Tag)<br>Algorithm</th>
+      <th>Block Time<br>Block Reward<br>Last Block</th>
+      <th><div class="text-center">Difficulty<br>NetHash<div></th>
+      <th><div class="text-center">Est. Rewards<br>Est. Rewards 24h</div></th>
+      <th><div class="text-center">Exchange Rate</div></th>
+      <th>Market Cap<br>Volume</th>
+      <th>Rev. BTC<br>Rev. 24h</th>
+      <th>Rev. $<br>Profit</th>
+      <th>Profitability<br>Current | 24h<br>3 days | 7 days</th>
+    </tr>
+  </thead>
+
+  <tbody>
+        <tr class=success>
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/151/thumb/eth.png?1486214743" alt="Eth" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/151-eth-ethash">Ethereum(ETH)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 16.09s<br>
+              BR: 2.91<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Reduced due to uncles lowered reward" data-placement="right" data-trigger="hover"></span><br>
+              LB: 4,885,420
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                2,011,396,701M
+              </strong>
+              <div class="small_text">
+                125.04 Th/s<br>
+                1.3%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0105<br>
+              0.0106
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-ETH">0.09586002<br />(Bittrex)</a>
+              <div class="small_text">
+                6.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            $128,609,899,856<br>
+            <strong>
+              20,460.74 BTC
+            </strong>
+          </td>
+          <td>
+            0.00101<br>
+            0.00102
+          </td>
+          <td>
+              $14.12<br>
+              <strong>
+                $13.15
+              </strong>
+          </td>
+          <td>
+              <strong>100%</strong> | 100%<br>
+              100% | 100%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/225/thumb/gbx.png?1514837371" alt="Gbx" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/225-gbx-neoscrypt">GoByte(GBX)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 38s<br>
+              BR: 7.50<br>
+              LB: 29,456
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                768.639
+              </strong>
+              <div class="small_text">
+                20.89 Gh/s<br>
+                -21.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.3827<br>
+              0.3023
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=GBX_BTC">0.00308985<br />(Cryptopia)</a>
+              <div class="small_text">
+                9.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            $55,280,646<br>
+            <strong>
+              40.72 BTC
+            </strong>
+          </td>
+          <td>
+            0.00118<br>
+            0.00093
+          </td>
+          <td>
+              $12.93<br>
+              <strong>
+                $11.85
+              </strong>
+          </td>
+          <td>
+              <strong>117%</strong> | 92%<br>
+              100% | 92%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/017/thumb/nicehash2.png?1486215159" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Ethash
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                3.18 Th/s<br>
+                3.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00097<br>
+              0.00093
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=20">0.01150000<br />(Nicehash)</a>
+              <div class="small_text">
+                3.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              34.06 BTC
+            </strong>
+          </td>
+          <td>
+            0.00097<br>
+            0.00093
+          </td>
+          <td>
+              $12.91<br>
+              <strong>
+                $11.94
+              </strong>
+          </td>
+          <td>
+              <strong>96%</strong> | 91%<br>
+              82% | 72%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/221/thumb/ella.png?1514372318" alt="Ella" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/221-ella-ethash">Ellaism(ELLA)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 13s<br>
+              BR: 4.91<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Reduced due to uncles lowered reward" data-placement="right" data-trigger="hover"></span><br>
+              LB: 749,893
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                10,543,662M
+              </strong>
+              <div class="small_text">
+                811.05 Gh/s<br>
+                10.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              3.3794<br>
+              3.7169
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=ELLA_BTC">0.00024607<br />(Cryptopia)</a>
+              <div class="small_text">
+                -4.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            $12,773,932<br>
+            <strong>
+              28.93 BTC
+            </strong>
+          </td>
+          <td>
+            0.00083<br>
+            0.00091
+          </td>
+          <td>
+              $12.66<br>
+              <strong>
+                $11.69
+              </strong>
+          </td>
+          <td>
+              83% | 90%<br>
+              100% | <strong>137%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/211/thumb/pirl.png?1509542465" alt="Pirl" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/211-pirl-ethash">Pirl(PIRL)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 14s<br>
+              BR: 10.00<br>
+              LB: 628,769
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                11,712,374M
+              </strong>
+              <div class="small_text">
+                836.60 Gh/s<br>
+                -8.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              6.1959<br>
+              5.6586
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=PIRL_BTC">0.00015007<br />(Cryptopia)</a>
+              <div class="small_text">
+                -2.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            $15,676,262<br>
+            <strong>
+              21.15 BTC
+            </strong>
+          </td>
+          <td>
+            0.00093<br>
+            0.00085
+          </td>
+          <td>
+              $11.76<br>
+              <strong>
+                $10.79
+              </strong>
+          </td>
+          <td>
+              <strong>92%</strong> | 83%<br>
+              86% | 83%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/185/thumb/zen.png?1496349679" alt="Zen" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/185-zen-equihash">Zencash(ZEN)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 34s<br>
+              BR: 11.00<br>
+              LB: 237,374
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                529,180.238
+              </strong>
+              <div class="small_text">
+                28.15 Mh/s<br>
+                0.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.1907<br>
+              0.1914
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-ZEN">0.00433424<br />(Bittrex)</a>
+              <div class="small_text">
+                10.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            $178,072,630<br>
+            <strong>
+              542.19 BTC
+            </strong>
+          </td>
+          <td>
+            0.00083<br>
+            0.00083
+          </td>
+          <td>
+              $11.49<br>
+              <strong>
+                $10.62
+              </strong>
+          </td>
+          <td>
+              <strong>82%</strong> | 81%<br>
+              81% | 75%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/168/thumb/hush2.png?1498678387" alt="Hush2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/168-hush-equihash">Hush(HUSH)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 30s<br>
+              BR: 12.50<br>
+              LB: 237,416
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                512,561,035.987
+              </strong>
+              <div class="small_text">
+                6.83 Mh/s<br>
+                1.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.9165<br>
+              0.9336
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=HUSH_BTC">0.00088005<br />(Cryptopia)</a>
+              <div class="small_text">
+                2.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $27,327,222<br>
+            <strong>
+              86.47 BTC
+            </strong>
+          </td>
+          <td>
+            0.00081<br>
+            0.00082
+          </td>
+          <td>
+              $11.38<br>
+              <strong>
+                $10.51
+              </strong>
+          </td>
+          <td>
+              80% | <strong>81%</strong><br>
+              65% | 73%
+          </td>
+        </tr>
+        <tr><td colspan="9"><div class='centered-image cointraffic-link'><span id='ct_c1CjxE'></span></div></td></tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/154/thumb/exp2.png?1486175482" alt="Exp2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/154-exp-ethash">Expanse(EXP)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 43s<br>
+              BR: 4.00<br>
+              LB: 911,740
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                16,473,115M
+              </strong>
+              <div class="small_text">
+                383.10 Gh/s<br>
+                -3.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              1.7619<br>
+              1.6960
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/?MarketName=BTC-EXP">0.00048333<br />(Bittrex)</a>
+              <div class="small_text">
+                -3.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            $52,914,910<br>
+            <strong>
+              72.55 BTC
+            </strong>
+          </td>
+          <td>
+            0.00085<br>
+            0.00082
+          </td>
+          <td>
+              $11.35<br>
+              <strong>
+                $10.38
+              </strong>
+          </td>
+          <td>
+              <strong>85%</strong> | 80%<br>
+              75% | 73%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/017/thumb/nicehash2.png?1486215159" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-CryptoNight
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                98.26 Mh/s<br>
+                -4.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00078<br>
+              0.00081
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=22">0.35840000<br />(Nicehash)</a>
+              <div class="small_text">
+                -3.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              37.59 BTC
+            </strong>
+          </td>
+          <td>
+            0.00078<br>
+            0.00081
+          </td>
+          <td>
+              $11.20<br>
+              <strong>
+                $10.41
+              </strong>
+          </td>
+          <td>
+              78% | <strong>79%</strong><br>
+              78% | 70%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/167/thumb/zcl.png?1486175437" alt="Zcl" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/167-zcl-equihash">Zclassic(ZCL)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 29s<br>
+              BR: 12.50<br>
+              LB: 244,978
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                1,691,049.061
+              </strong>
+              <div class="small_text">
+                92.97 Mh/s<br>
+                -0.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0678<br>
+              0.0673
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/?MarketName=BTC-ZCL">0.01177101<br />(Bittrex)</a>
+              <div class="small_text">
+                -3.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $498,636,872<br>
+            <strong>
+              1,170.73 BTC
+            </strong>
+          </td>
+          <td>
+            0.00080<br>
+            0.00079
+          </td>
+          <td>
+              $10.96<br>
+              <strong>
+                $10.10
+              </strong>
+          </td>
+          <td>
+              79% | 78%<br>
+              70% | <strong>80%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/003/thumb/nicehash2.png?1486215159" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-NeoScrypt
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                72.52 Gh/s<br>
+                44.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00076<br>
+              0.00077
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=8">0.39090000<br />(Nicehash)</a>
+              <div class="small_text">
+                -1.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              19.84 BTC
+            </strong>
+          </td>
+          <td>
+            0.00076<br>
+            0.00077
+          </td>
+          <td>
+              $10.66<br>
+              <strong>
+                $9.58
+              </strong>
+          </td>
+          <td>
+              <strong>76%</strong> | 76%<br>
+              71% | 65%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/178/thumb/music.png?1490568984" alt="Music" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/178-music-ethash">Musicoin(MUSIC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 15s<br>
+              BR: 246.20<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Reduced due to uncles lowered reward" data-placement="right" data-trigger="hover"></span><br>
+              LB: 1,758,993
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                11,679,824M
+              </strong>
+              <div class="small_text">
+                778.65 Gh/s<br>
+                -14.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              152.9671<br>
+              131.6103
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-MUSIC">0.00000581<br />(Bittrex)</a>
+              <div class="small_text">
+                -17.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            $44,086,102<br>
+            <strong>
+              716.32 BTC
+            </strong>
+          </td>
+          <td>
+            0.00089<br>
+            0.00076
+          </td>
+          <td>
+              $10.59<br>
+              <strong>
+                $9.62
+              </strong>
+          </td>
+          <td>
+              <strong>88%</strong> | 75%<br>
+              72% | 80%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/173/thumb/ubq.png?1486175435" alt="Ubq" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/173-ubq-ethash">Ubiq(UBQ)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 27s<br>
+              BR: 8.00<br>
+              LB: 345,068
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                27,073,014M
+              </strong>
+              <div class="small_text">
+                311.18 Gh/s<br>
+                -7.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              2.1440<br>
+              1.9791
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-UBQ">0.00038550<br />(Bittrex)</a>
+              <div class="small_text">
+                -3.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $208,770,571<br>
+            <strong>
+              187.25 BTC
+            </strong>
+          </td>
+          <td>
+            0.00083<br>
+            0.00076
+          </td>
+          <td>
+              $10.56<br>
+              <strong>
+                $9.59
+              </strong>
+          </td>
+          <td>
+              <strong>82%</strong> | 75%<br>
+              72% | 62%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/122/thumb/hal3.png?1486175488" alt="Hal3" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/122-hal-neoscrypt">Halcyon(HAL)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 10m<br>
+              BR: 5.00<br>
+              LB: 984,577
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                6.675
+              </strong>
+              <div class="small_text">
+                47.78 Mh/s<br>
+                2.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              28.2330<br>
+              28.7821
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=HAL_BTC">0.00002623<br />(Cryptopia)</a>
+              <div class="small_text">
+                6.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            $1,965,288<br>
+            <strong>
+              0.84 BTC
+            </strong>
+          </td>
+          <td>
+            0.00074<br>
+            0.00075
+          </td>
+          <td>
+              $10.45<br>
+              <strong>
+                $9.37
+              </strong>
+          </td>
+          <td>
+              74% | <strong>74%</strong><br>
+              63% | 34%
+          </td>
+        </tr>
+        <tr><td colspan="9"><div class="centered-image"><a target="_blank" class="blockchain-link" href="http://blockchainweekly.net/?utm_source=whattomine&amp;utm_campaign=bottom_popup&amp;utm_medium=banner"><img src="https://images.whattomine.com/misc/weekly2.png" alt="Weekly2" /></a></div></td></tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/200/thumb/vivo.png?1511299591" alt="Vivo" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/200-vivo-neoscrypt">Vivo(VIVO)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 3s<br>
+              BR: 5.00<br>
+              LB: 93,369
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                156.522
+              </strong>
+              <div class="small_text">
+                5.47 Gh/s<br>
+                -1.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              1.2526<br>
+              1.2392
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=VIVO_BTC">0.00060500<br />(Cryptopia)</a>
+              <div class="small_text">
+                -6.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            $8,642,137<br>
+            <strong>
+              15.64 BTC
+            </strong>
+          </td>
+          <td>
+            0.00076<br>
+            0.00075
+          </td>
+          <td>
+              $10.38<br>
+              <strong>
+                $9.30
+              </strong>
+          </td>
+          <td>
+              <strong>75%</strong> | 74%<br>
+              68% | 68%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/214/thumb/btg.png?1510997004" alt="Btg" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/214-btg-equihash">BitcoinGold(BTG)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 9m 58s<br>
+              BR: 12.50<br>
+              LB: 508,489
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                3,112,724.245
+              </strong>
+              <div class="small_text">
+                42.64 Mh/s<br>
+                18.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0368<br>
+              0.0436
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-BTG">0.01633093<br />(Bittrex)</a>
+              <div class="small_text">
+                -1.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            $3,811,712,440<br>
+            <strong>
+              1,180.30 BTC
+            </strong>
+          </td>
+          <td>
+            0.00060<br>
+            0.00071
+          </td>
+          <td>
+              $9.87<br>
+              <strong>
+                $9.01
+              </strong>
+          </td>
+          <td>
+              60% | <strong>70%</strong><br>
+              63% | 58%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/162/thumb/etc3.png?1496094431" alt="Etc3" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/162-etc-ethash">EthereumClassic(ETC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 14.43s<br>
+              BR: 3.88<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Reduced due to uncles lowered reward" data-placement="right" data-trigger="hover"></span><br>
+              LB: 5,179,404
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                100,626,542M
+              </strong>
+              <div class="small_text">
+                6.97 Th/s<br>
+                -3.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.2798<br>
+              0.2698
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-ETC">0.00263999<br />(Bittrex)</a>
+              <div class="small_text">
+                5.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            $3,619,551,640<br>
+            <strong>
+              5,661.98 BTC
+            </strong>
+          </td>
+          <td>
+            0.00074<br>
+            0.00071
+          </td>
+          <td>
+              $9.86<br>
+              <strong>
+                $8.89
+              </strong>
+          </td>
+          <td>
+              <strong>73%</strong> | 70%<br>
+              69% | 65%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/166/thumb/zec.png?1486175433" alt="Zec" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/166-zec-equihash">Zcash(ZEC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 32s<br>
+              BR: 10.00<br>
+              LB: 252,082
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                5,699,949.290
+              </strong>
+              <div class="small_text">
+                307.20 Mh/s<br>
+                -7.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0161<br>
+              0.0149
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://hitbtc.com/exchange/ZEC-to-BTC">0.04772000<br />(HitBTC)</a>
+              <div class="small_text">
+                3.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            $1,999,537,419<br>
+            <strong>
+              2,037.56 BTC
+            </strong>
+          </td>
+          <td>
+            0.00077<br>
+            0.00071
+          </td>
+          <td>
+              $9.82<br>
+              <strong>
+                $8.95
+              </strong>
+          </td>
+          <td>
+              <strong>76%</strong> | 70%<br>
+              65% | 64%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/196/thumb/sumo2.png?1504730375" alt="Sumo2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/196-sumo-cryptonight">Sumokoin(SUMO)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 4m 4s<br>
+              BR: 36.45<br>
+              LB: 89,684
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                4,172,854,906
+              </strong>
+              <div class="small_text">
+                17.10 Mh/s<br>
+                -3.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              1.6526<br>
+              1.5969
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange/?market=SUMO_BTC">0.00044096<br />(Cryptopia)</a>
+              <div class="small_text">
+                0.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $17,261,958<br>
+            <strong>
+              49.94 BTC
+            </strong>
+          </td>
+          <td>
+            0.00073<br>
+            0.00070
+          </td>
+          <td>
+              $9.75<br>
+              <strong>
+                $8.96
+              </strong>
+          </td>
+          <td>
+              <strong>72%</strong> | 69%<br>
+              60% | 62%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/019/thumb/nicehash2.png?1486215157" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Equihash
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                32.81 Mh/s<br>
+                -35.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00069<br>
+              0.00070
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=24">0.79780000<br />(Nicehash)</a>
+              <div class="small_text">
+                -0.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              39.86 BTC
+            </strong>
+          </td>
+          <td>
+            0.00069<br>
+            0.00070
+          </td>
+          <td>
+              $9.66<br>
+              <strong>
+                $8.79
+              </strong>
+          </td>
+          <td>
+              <strong>69%</strong> | 68%<br>
+              65% | 60%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/215/thumb/tzc.png?1511298656" alt="Tzc" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/215-tzc-neoscrypt">Trezarcoin(TZC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 30s<br>
+              BR: 100.00<br>
+              LB: 182,508
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                70.988
+              </strong>
+              <div class="small_text">
+                3.39 Gh/s<br>
+                -4.3%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              55.2272<br>
+              52.8651
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=TZC_BTC">0.00001290<br />(Cryptopia)</a>
+              <div class="small_text">
+                -2.2%
+              </div>
+            </div>
+          </td>
+          <td>
+            $15,405,982<br>
+            <strong>
+              3.30 BTC
+            </strong>
+          </td>
+          <td>
+            0.00071<br>
+            0.00068
+          </td>
+          <td>
+              $9.44<br>
+              <strong>
+                $8.36
+              </strong>
+          </td>
+          <td>
+              71% | 67%<br>
+              <strong>77%</strong> | 70%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/209/thumb/etp.png?1508692794" alt="Etp" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/209-etp-ethash">Metaverse(ETP)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Ethash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 35s<br>
+              BR: 2.85<br>
+              LB: 859,301
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                8,812,850M
+              </strong>
+              <div class="small_text">
+                251.80 Gh/s<br>
+                -4.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              2.3463<br>
+              2.2348
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.bitfinex.com/trading/ETPBTC">0.00028570<br />(Bitfinex)</a>
+              <div class="small_text">
+                -4.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $146,196,651<br>
+            <strong>
+              106.12 BTC
+            </strong>
+          </td>
+          <td>
+            0.00067<br>
+            0.00064
+          </td>
+          <td>
+              $8.84<br>
+              <strong>
+                $7.87
+              </strong>
+          </td>
+          <td>
+              <strong>67%</strong> | 63%<br>
+              63% | 61%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/213/thumb/etn.png?1509870395" alt="Etn" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/213-etn-cryptonight">Electroneum(ETN)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 59s<br>
+              BR: 7,246.59<br>
+              LB: 106,143
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                16,167,507,108
+              </strong>
+              <div class="small_text">
+                274.03 Mh/s<br>
+                6.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              55.1262<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Pool negative luck included by default" data-placement="right" data-trigger="hover"></span><br>
+              57.9569<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Pool negative luck included by default" data-placement="right" data-trigger="hover"></span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=ETN_BTC">0.00001040<br />(Cryptopia)</a>
+              <div class="small_text">
+                -3.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $719,685,053<br>
+            <strong>
+              516.67 BTC
+            </strong>
+          </td>
+          <td>
+            0.00057<br>
+            0.00060
+          </td>
+          <td>
+              $8.35<br>
+              <strong>
+                $7.55
+              </strong>
+          </td>
+          <td>
+              57% | 59%<br>
+              58% | <strong>66%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/177/thumb/pasl.png?1490029953" alt="Pasl" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/177-pasl-pascal">PascalLite(PASL)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Pascal
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 6m 25s<br>
+              BR: 50.00<br>
+              LB: 94,462
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                93,301.310
+              </strong>
+              <div class="small_text">
+                1.04 Th/s<br>
+                -12.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              22.5933<br>
+              19.8678
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=PASL_BTC">0.00003000<br />(Cryptopia)</a>
+              <div class="small_text">
+                -2.2%
+              </div>
+            </div>
+          </td>
+          <td>
+            $1,961,940<br>
+            <strong>
+              0.52 BTC
+            </strong>
+          </td>
+          <td>
+            0.00068<br>
+            0.00060
+          </td>
+          <td>
+              $8.25<br>
+              <strong>
+                $7.28
+              </strong>
+          </td>
+          <td>
+              <strong>67%</strong> | 58%<br>
+              54% | 58%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/176/thumb/krb.png?1507908772" alt="Krb" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/176-krb-cryptonight">Karbo(KRB)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 4m 5s<br>
+              BR: 18.64<br>
+              LB: 187,804
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                438,286,249
+              </strong>
+              <div class="small_text">
+                1.79 Mh/s<br>
+                -34.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              8.0378<br>
+              5.2720
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">0.00011273<br />(Cryptopia)</a>
+              <div class="small_text">
+                0.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $7,981,885<br>
+            <strong>
+              1.22 BTC
+            </strong>
+          </td>
+          <td>
+            0.00091<br>
+            0.00059
+          </td>
+          <td>
+              $8.23<br>
+              <strong>
+                $7.44
+              </strong>
+          </td>
+          <td>
+              <strong>90%</strong> | 58%<br>
+              59% | 53%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/204/thumb/altcom.png?1507059098" alt="Altcom" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/204-altcom-skunkhash">Altcommunity(ALTCOM)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Skunkhash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 4s<br>
+              BR: 1.00<br>
+              LB: 168,302
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                805.920
+              </strong>
+              <div class="small_text">
+                54.08 Gh/s<br>
+                -27.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              1.3465<br>
+              0.9759
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://yobit.net/en/trade/ALTCOM/BTC">0.00060011<br />(YoBit)</a>
+              <div class="small_text">
+                2.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,099,968<br>
+            <strong>
+              0.61 BTC
+            </strong>
+          </td>
+          <td>
+            0.00081<br>
+            0.00059
+          </td>
+          <td>
+              $8.11<br>
+              <strong>
+                $7.28
+              </strong>
+          </td>
+          <td>
+              <strong>80%</strong> | 57%<br>
+              57% | 62%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/023/thumb/nicehash2.png?1502791496" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Skunkhash
+            </div>
+            <div style="margin-left: 50px">
+              Skunkhash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                48.07 Gh/s<br>
+                -65.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00055<br>
+              0.00057
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=29">0.01020000<br />(Nicehash)</a>
+              <div class="small_text">
+                -3.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              1.43 BTC
+            </strong>
+          </td>
+          <td>
+            0.00055<br>
+            0.00057
+          </td>
+          <td>
+              $7.93<br>
+              <strong>
+                $7.10
+              </strong>
+          </td>
+          <td>
+              55% | <strong>56%</strong><br>
+              54% | 53%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/169/thumb/sib2.png?1486175445" alt="Sib2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/169-sib-x11gost">Sibcoin(SIB)</a>
+            </div>
+            <div style="margin-left: 50px">
+              X11Gost
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 36s<br>
+              BR: 3.88<br>
+              LB: 535,766
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                1,601.202
+              </strong>
+              <div class="small_text">
+                44.08 Gh/s<br>
+                52.2%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.9794<br>
+              1.9936
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-SIB">0.00028542<br />(Bittrex)</a>
+              <div class="small_text">
+                -4.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            $63,837,776<br>
+            <strong>
+              47.36 BTC
+            </strong>
+          </td>
+          <td>
+            0.00028<br>
+            0.00057
+          </td>
+          <td>
+              $7.88<br>
+              <strong>
+                $6.87
+              </strong>
+          </td>
+          <td>
+              28% | <strong>56%</strong><br>
+              50% | 42%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/072/thumb/orb.png?1486175479" alt="Orb" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/72-orb-neoscrypt">Orbitcoin(ORB)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 3m<br>
+              BR: 1.00<br>
+              LB: 2,342,604
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                3.529
+              </strong>
+              <div class="small_text">
+                84.21 Mh/s<br>
+                -22.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              10.8633<br>
+              8.5037
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.cryptopia.co.nz/Exchange?market=ORB_BTC">0.00005742<br />(Cryptopia)</a>
+              <div class="small_text">
+                10.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,478,800<br>
+            <strong>
+              1.39 BTC
+            </strong>
+          </td>
+          <td>
+            0.00062<br>
+            0.00049
+          </td>
+          <td>
+              $6.76<br>
+              <strong>
+                $5.68
+              </strong>
+          </td>
+          <td>
+              62% | 48%<br>
+              66% | <strong>68%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/008/thumb/feathercoin_logo_256px.png?1486175490" alt="Feathercoin logo 256px" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/8-ftc-neoscrypt">Feathercoin(FTC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              NeoScrypt
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 2s<br>
+              BR: 40.00<br>
+              LB: 2,041,634
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                89.351
+              </strong>
+              <div class="small_text">
+                6.19 Gh/s<br>
+                -24.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              17.5554<br>
+              13.3494
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-FTC">0.00003555<br />(Bittrex)</a>
+              <div class="small_text">
+                -2.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $92,489,060<br>
+            <strong>
+              80.80 BTC
+            </strong>
+          </td>
+          <td>
+            0.00062<br>
+            0.00047
+          </td>
+          <td>
+              $6.57<br>
+              <strong>
+                $5.49
+              </strong>
+          </td>
+          <td>
+              <strong>62%</strong> | 47%<br>
+              51% | 50%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/021/thumb/nicehash2.png?1487105035" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-X11Gost
+            </div>
+            <div style="margin-left: 50px">
+              X11Gost
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                3.30 Gh/s<br>
+                -54.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00049<br>
+              0.00044
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=26">0.02440000<br />(Nicehash)</a>
+              <div class="small_text">
+                12.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              0.15 BTC
+            </strong>
+          </td>
+          <td>
+            0.00049<br>
+            0.00044
+          </td>
+          <td>
+              $6.04<br>
+              <strong>
+                $5.03
+              </strong>
+          </td>
+          <td>
+              <strong>49%</strong> | 43%<br>
+              39% | 36%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/172/thumb/pasc.png?1508609300" alt="Pasc" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/172-pasc-pascal">Pascalcoin(PASC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Pascal
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 4m 37s<br>
+              BR: 100.00<br>
+              LB: 168,193
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                3,562,200.000
+              </strong>
+              <div class="small_text">
+                55.23 Th/s<br>
+                8.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              1.1859<br>
+              1.2851
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://poloniex.com/exchange#btc_pasc">0.00032000<br />(Poloniex)</a>
+              <div class="small_text">
+                -6.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $74,526,105<br>
+            <strong>
+              82.50 BTC
+            </strong>
+          </td>
+          <td>
+            0.00038<br>
+            0.00041
+          </td>
+          <td>
+              $5.69<br>
+              <strong>
+                $4.72
+              </strong>
+          </td>
+          <td>
+              38% | 40%<br>
+              44% | <strong>45%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/101/thumb/monero.png?1486175477" alt="Monero" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/101-xmr-cryptonight">Monero(XMR)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 1s<br>
+              BR: 5.46<br>
+              LB: 1,484,084
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                71,089,255,187
+              </strong>
+              <div class="small_text">
+                587.51 Mh/s<br>
+                -0.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0145<br>
+              0.0145
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://hitbtc.com/exchange/XMR-to-BTC">0.02774600<br />(HitBTC)</a>
+              <div class="small_text">
+                -2.2%
+              </div>
+            </div>
+          </td>
+          <td>
+            $5,987,949,805<br>
+            <strong>
+              2,406.20 BTC
+            </strong>
+          </td>
+          <td>
+            0.00040<br>
+            0.00040
+          </td>
+          <td>
+              $5.58<br>
+              <strong>
+                $4.79
+              </strong>
+          </td>
+          <td>
+              40% | 40%<br>
+              <strong>42%</strong> | 40%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/152/thumb/dcr3.png?1487197391" alt="Dcr3" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/152-dcr-blake-14r">Decred(DCR)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Blake (14r)
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 4m 47s<br>
+              BR: 13.61<br>
+              LB: 202,639
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                30,482,252.580
+              </strong>
+              <div class="small_text">
+                456.17 Th/s<br>
+                -1.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.0531<br>
+              0.0523
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-DCR">0.00761000<br />(Bittrex)</a>
+              <div class="small_text">
+                -4.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            $687,985,631<br>
+            <strong>
+              164.51 BTC
+            </strong>
+          </td>
+          <td>
+            0.00040<br>
+            0.00040
+          </td>
+          <td>
+              $5.51<br>
+              <strong>
+                $4.14
+              </strong>
+          </td>
+          <td>
+              <strong>40%</strong> | 39%<br>
+              37% | 37%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/003/thumb/nicehash2.png?1486215159" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Blake (14r)
+            </div>
+            <div style="margin-left: 50px">
+              Blake (14r)
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                36.21 Th/s<br>
+                8.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00034<br>
+              0.00035
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=21">0.05700000<br />(Nicehash)</a>
+              <div class="small_text">
+                -2.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              1.97 BTC
+            </strong>
+          </td>
+          <td>
+            0.00034<br>
+            0.00035
+          </td>
+          <td>
+              $4.80<br>
+              <strong>
+                $3.44
+              </strong>
+          </td>
+          <td>
+              33% | <strong>34%</strong><br>
+              33% | 31%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/020/thumb/nicehash2.png?1486428734" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Pascal
+            </div>
+            <div style="margin-left: 50px">
+              Pascal
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                7.14 Th/s<br>
+                -24.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00028<br>
+              0.00035
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=25">0.13520000<br />(Nicehash)</a>
+              <div class="small_text">
+                -17.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              1.54 BTC
+            </strong>
+          </td>
+          <td>
+            0.00028<br>
+            0.00035
+          </td>
+          <td>
+              $4.78<br>
+              <strong>
+                $3.81
+              </strong>
+          </td>
+          <td>
+              28% | 34%<br>
+              <strong>34%</strong> | 33%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/103/thumb/bcn.png?1486175441" alt="Bcn" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/103-bcn-cryptonight">Bytecoin(BCN)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 5s<br>
+              BR: 3,108.51<br>
+              LB: 1,438,887
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                1,346,772,070
+              </strong>
+              <div class="small_text">
+                10.77 Mh/s<br>
+                -2.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              436.6450<br>
+              428.4812
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://hitbtc.com/exchange/BCN-to-BTC">0.00000079<br />(HitBTC)</a>
+              <div class="small_text">
+                -1.4%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,007,425,501<br>
+            <strong>
+              693.51 BTC
+            </strong>
+          </td>
+          <td>
+            0.00035<br>
+            0.00034
+          </td>
+          <td>
+              $4.69<br>
+              <strong>
+                $3.90
+              </strong>
+          </td>
+          <td>
+              34% | 33%<br>
+              33% | <strong>37%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/164/thumb/lbc2.png?1486175491" alt="Lbc2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/164-lbc-lbry">LBRY(LBC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              LBRY
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 37s<br>
+              BR: 377.00<br>
+              LB: 302,999
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                792,125.002
+              </strong>
+              <div class="small_text">
+                21.67 Th/s<br>
+                32.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              3.0158<br>
+              4.0054
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-LBC">0.00007395<br />(Bittrex)</a>
+              <div class="small_text">
+                -2.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            $132,349,645<br>
+            <strong>
+              299.64 BTC
+            </strong>
+          </td>
+          <td>
+            0.00022<br>
+            0.00030
+          </td>
+          <td>
+              $4.10<br>
+              <strong>
+                $2.84
+              </strong>
+          </td>
+          <td>
+              22% | 29%<br>
+              <strong>33%</strong> | 33%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/174/thumb/kmd.png?1486915061" alt="Kmd" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/174-kmd-equihash">Komodo(KMD)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Equihash
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 59s<br>
+              BR: 3.00<br>
+              LB: 659,974
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                31,912,432.198
+              </strong>
+              <div class="small_text">
+                8.65 Mh/s<br>
+                14.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.4416<br>
+              0.5057
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-KMD">0.00056003<br />(Bittrex)</a>
+              <div class="small_text">
+                -6.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            $806,054,038<br>
+            <strong>
+              389.87 BTC
+            </strong>
+          </td>
+          <td>
+            0.00025<br>
+            0.00028
+          </td>
+          <td>
+              $3.92<br>
+              <strong>
+                $3.06
+              </strong>
+          </td>
+          <td>
+              25% | 28%<br>
+              <strong>30%</strong> | 30%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/048/thumb/grs3.png?1513868293" alt="Grs3" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/48-grs-groestl">GroestlCoin(GRS)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Groestl
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 3s<br>
+              BR: 5.00<br>
+              LB: 1,915,922
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                2,733.564
+              </strong>
+              <div class="small_text">
+                186.36 Gh/s<br>
+                23.3%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              2.3504<br>
+              2.8973
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-GRS">0.00009645<br />(Bittrex)</a>
+              <div class="small_text">
+                -7.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            $92,402,890<br>
+            <strong>
+              190.27 BTC
+            </strong>
+          </td>
+          <td>
+            0.00023<br>
+            0.00028
+          </td>
+          <td>
+              $3.87<br>
+              <strong>
+                $2.79
+              </strong>
+          </td>
+          <td>
+              23% | 27%<br>
+              <strong>28%</strong> | 26%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/161/thumb/sc.png?1486175478" alt="Sc" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/161-sc-blake-2b">Sia(SC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Blake (2b)
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 26m 24s<br>
+              BR: 161,537.00<br>
+              LB: 138,463
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                849,700,626G
+              </strong>
+              <div class="small_text">
+                536.43 Th/s<br>
+                0.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              56.6678<br>
+              57.1835
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-SC">0.00000482<br />(Bittrex)</a>
+              <div class="small_text">
+                -6.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,095,458,542<br>
+            <strong>
+              5,457.20 BTC
+            </strong>
+          </td>
+          <td>
+            0.00027<br>
+            0.00028
+          </td>
+          <td>
+              $3.82<br>
+              <strong>
+                $2.30
+              </strong>
+          </td>
+          <td>
+              27% | 27%<br>
+              31% | <strong>31%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/018/thumb/nicehash2.png?1486215156" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-LBRY
+            </div>
+            <div style="margin-left: 50px">
+              LBRY
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                3.02 Th/s<br>
+                3.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00023<br>
+              0.00026
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=23">0.74400000<br />(Nicehash)</a>
+              <div class="small_text">
+                -10.3%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              2.41 BTC
+            </strong>
+          </td>
+          <td>
+            0.00023<br>
+            0.00026
+          </td>
+          <td>
+              $3.62<br>
+              <strong>
+                $2.36
+              </strong>
+          </td>
+          <td>
+              23% | 26%<br>
+              <strong>27%</strong> | 25%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/022/thumb/nicehash2.png?1495387064" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Blake (2b)
+            </div>
+            <div style="margin-left: 50px">
+              Blake (2b)
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                2.49 Th/s<br>
+                14.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00023<br>
+              0.00024
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=27">0.06760000<br />(Nicehash)</a>
+              <div class="small_text">
+                -1.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              0.15 BTC
+            </strong>
+          </td>
+          <td>
+            0.00023<br>
+            0.00024
+          </td>
+          <td>
+              $3.28<br>
+              <strong>
+                $1.77
+              </strong>
+          </td>
+          <td>
+              23% | 23%<br>
+              <strong>26%</strong> | 24%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/217/thumb/xvg2.png?1514365919" alt="Xvg2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/217-xvg-lyra2rev2">Verge-Lyra2REv2(XVG)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Lyra2REv2
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 30s<br>
+              BR: 1,560.00<br>
+              LB: 1,789,544
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                47,066.901
+              </strong>
+              <div class="small_text">
+                1.35 Th/s<br>
+                4.5%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              9.8011<br>
+              10.2449
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-XVG">0.00001176<br />(Bittrex)</a>
+              <div class="small_text">
+                -9.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,364,814,909<br>
+            <strong>
+              11,011.20 BTC
+            </strong>
+          </td>
+          <td>
+            0.00012<br>
+            0.00012
+          </td>
+          <td>
+              $1.67<br>
+              <strong>
+                $0.73
+              </strong>
+          </td>
+          <td>
+              11% | 12%<br>
+              12% | <strong>12%</strong>
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/nice_hash_coins/logos/000/000/012/thumb/nicehash2.png?1486215163" alt="Nicehash2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              Nicehash-Lyra2REv2
+            </div>
+            <div style="margin-left: 50px">
+              Lyra2REv2
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: -<br>
+              BR: -<br>
+              LB: -
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                -
+              </strong>
+              <div class="small_text">
+                4.05 Th/s<br>
+                71.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.00012<br>
+              0.00012
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://www.nicehash.com/?p=orders&amp;a=14">7.87340000<br />(Nicehash)</a>
+              <div class="small_text">
+                -2.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            -<br>
+            <strong>
+              19.15 BTC
+            </strong>
+          </td>
+          <td>
+            0.00012<br>
+            0.00012
+          </td>
+          <td>
+              $1.65<br>
+              <strong>
+                $0.71
+              </strong>
+          </td>
+          <td>
+              11% | <strong>12%</strong><br>
+              11% | 10%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/148/thumb/mona.png?1486175481" alt="Mona" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/148-mona-lyra2rev2">Monacoin(MONA)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Lyra2REv2
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 34s<br>
+              BR: 25.00<br>
+              LB: 1,213,610
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                37,982.770
+              </strong>
+              <div class="small_text">
+                1.74 Th/s<br>
+                -1.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.1946<br>
+              0.1911
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/?MarketName=BTC-MONA">0.00054210<br />(Bittrex)</a>
+              <div class="small_text">
+                -6.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            $425,012,877<br>
+            <strong>
+              327.50 BTC
+            </strong>
+          </td>
+          <td>
+            0.00011<br>
+            0.00010
+          </td>
+          <td>
+              $1.43<br>
+              <strong>
+                $0.50
+              </strong>
+          </td>
+          <td>
+              <strong>10%</strong> | 10%<br>
+              10% | 10%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/005/thumb/vtc2.png?1515456120" alt="Vtc2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/5-vtc-lyra2rev2">Vertcoin(VTC)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Lyra2REv2
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 53s<br>
+              BR: 25.00<br>
+              LB: 856,785
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                26,329.545
+              </strong>
+              <div class="small_text">
+                653.67 Gh/s<br>
+                -14.1%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              0.2808<br>
+              0.2411
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-VTC">0.00042500<br />(Bittrex)</a>
+              <div class="small_text">
+                -2.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            $249,637,844<br>
+            <strong>
+              446.20 BTC
+            </strong>
+          </td>
+          <td>
+            0.00012<br>
+            0.00010
+          </td>
+          <td>
+              $1.42<br>
+              <strong>
+                $0.48
+              </strong>
+          </td>
+          <td>
+              <strong>12%</strong> | 10%<br>
+              10% | 9%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/104/thumb/xdn4.png?1486175479" alt="Xdn4" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/104-xdn-cryptonight">DigitalNote(XDN)</a>
+            </div>
+            <div style="margin-left: 50px">
+              CryptoNight
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 4m 3s<br>
+              BR: 150.00<br>
+              LB: 470,101
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                1,187,308,424
+              </strong>
+              <div class="small_text">
+                4.89 Mh/s<br>
+                -5.6%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              23.8941<br>
+              22.5669
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/?MarketName=BTC-XDN">0.00000433<br />(Bittrex)</a>
+              <div class="small_text">
+                -7.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            $412,849,172<br>
+            <strong>
+              1,069.46 BTC
+            </strong>
+          </td>
+          <td>
+            0.00010<br>
+            0.00010
+          </td>
+          <td>
+              $1.35<br>
+              <strong>
+                $0.56
+              </strong>
+          </td>
+          <td>
+              <strong>10%</strong> | 10%<br>
+              10% | 10%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/218/thumb/xvg2.png?1514366080" alt="Xvg2" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/218-xvg-myriad-groestl">Verge-Groestl(XVG)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Myriad-Groestl<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Rewards calculated with groestl hashrate multiplied by 1.47" data-placement="right" data-trigger="hover"></span>
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 2m 30s<br>
+              BR: 1,560.00<br>
+              LB: 1,789,544
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                525,218.663
+              </strong>
+              <div class="small_text">
+                15.04 Th/s<br>
+                -18.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              5.6125<br>
+              4.5560
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-XVG">0.00001176<br />(Bittrex)</a>
+              <div class="small_text">
+                -9.9%
+              </div>
+            </div>
+          </td>
+          <td>
+            $2,364,814,909<br>
+            <strong>
+              11,011.20 BTC
+            </strong>
+          </td>
+          <td>
+            0.00007<br>
+            0.00005
+          </td>
+          <td>
+              $0.74<br>
+              <strong>
+                -$0.34
+              </strong>
+          </td>
+          <td>
+              <strong>7%</strong> | 5%<br>
+              5% | 5%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/112/thumb/digibytelogo.png?1486175476" alt="Digibytelogo" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/112-dgb-myriad-groestl">DGB-Groestl(DGB)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Myriad-Groestl<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Rewards calculated with groestl hashrate multiplied by 1.47" data-placement="right" data-trigger="hover"></span>
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 15s<br>
+              BR: 814.65<br>
+              LB: 5,881,849
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                466,734.099
+              </strong>
+              <div class="small_text">
+                26.73 Th/s<br>
+                71.7%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              3.2982<br>
+              5.6613
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-DGB">0.00000717<br />(Bittrex)</a>
+              <div class="small_text">
+                -6.3%
+              </div>
+            </div>
+          </td>
+          <td>
+            $960,712,142<br>
+            <strong>
+              1,919.85 BTC
+            </strong>
+          </td>
+          <td>
+            0.00002<br>
+            0.00004
+          </td>
+          <td>
+              $0.56<br>
+              <strong>
+                -$0.52
+              </strong>
+          </td>
+          <td>
+              2% | <strong>4%</strong><br>
+              4% | 4%
+          </td>
+        </tr>
+        <tr >
+          <td>
+            <div style="float: left">
+                <img src="https://images.whattomine.com/coins/logos/000/000/049/thumb/myr.png?1486175486" alt="Myr" width="40" height="40" />
+            </div>
+            <div style="margin-left: 50px">
+              <a href="/coins/49-xmy-myriad-groestl">Myriad-Groestl(XMY)</a>
+            </div>
+            <div style="margin-left: 50px">
+              Myriad-Groestl<span class="glyphicon glyphicon-info-sign title-tip popover-as-title" data-content="Rewards calculated with groestl hashrate multiplied by 1.47" data-placement="right" data-trigger="hover"></span>
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 8pt">
+              BT: 1m 24s<br>
+              BR: 250.00<br>
+              LB: 2,302,584
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <strong>
+                45,928.884
+              </strong>
+              <div class="small_text">
+                2.35 Th/s<br>
+                -19.0%
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              10.2851<br>
+              8.3321
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <a target="_blank" class="exrate-link" href="https://bittrex.com/Market/Index?MarketName=BTC-XMY">0.00000271<br />(Bittrex)</a>
+              <div class="small_text">
+                5.8%
+              </div>
+            </div>
+          </td>
+          <td>
+            $57,913,720<br>
+            <strong>
+              182.54 BTC
+            </strong>
+          </td>
+          <td>
+            0.00003<br>
+            0.00002
+          </td>
+          <td>
+              $0.31<br>
+              <strong>
+                -$0.77
+              </strong>
+          </td>
+          <td>
+              <strong>3%</strong> | 2%<br>
+              2% | 3%
+          </td>
+        </tr>
+  </tbody>
+</table>
+
+Last update at 2018-01-10 13:18:35 UTC
+
+      <footer class="footer">
+  <nav>
+    <small>
+      <ul>
+        © 2018 <a href="/coins">WhatToMine</a> |
+        <a target="_blank" href="https://bitcointalk.org/index.php?topic=567730.0">Bitcointalk Thread</a> |
+        <a href="/policy-terms">Policy &amp; Terms</a>
+      </ul>
+    </small>
+  </nav>
+</footer>
+
+    </div>
+  </body>
+</html>
