@@ -1,7 +1,7 @@
 {
     "name": "andrey-mashukov/cryptotop",
     "keywords": ["crypto_currency_information", "coinmarketcap_grabber"],
-    "homepage": "https://svn.btcdaily.ru/crypto100",
+    "homepage": "https://github.com/AndreyMashukov/cryptotop",
     "description": "Top crypto currencies rating",
     "license": "MIT",
     "authors": [
