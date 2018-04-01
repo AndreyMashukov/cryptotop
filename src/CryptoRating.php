@@ -164,7 +164,7 @@ class CryptoRating
 		    "marketcap"          => "//td[@class='no-wrap market-cap text-right']",
 		    "price"              => "//td[@class='no-wrap text-right']/a[@class='price']",
 		    "volume"             => "//td[@class='no-wrap text-right']/a[@class='volume']",
-			"circulating supply" => "//td[@class='no-wrap text-right circulating-supply']/a/span[1] | //td[@class='no-wrap text-right circulating-supply']/span/span[1]",
+			"circulating_supply" => "//td[@class='no-wrap text-right circulating-supply']/a/span[1] | //td[@class='no-wrap text-right circulating-supply']/span/span[1]",
 		    "change"             => "//td[(last() - 1)]",
 		    "image"              => "//td[last()]/a/img/@src",
 		];
