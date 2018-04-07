@@ -17,49 +17,45 @@ use \Logics\Foundation\HTTP\HTTPclient;
  *
  * @author  Andrey Mashukov <a.mashukoff@gmail.com>
  */
-
 class AlgoGrabberJson extends AlgoGrabber
+{
+
+    /**
+     * Get mining algorithm list
+     *
+     * @param string $device Type of mining device
+     *
+     * @return array Mining algorithms
+     */
+
+    public function getAlgorithm(string $device): array
     {
+        $algorithms = [];
 
-	/**
-	 * Get mining algorithm list
-	 *
-	 * @param string $device Type of mining device
-	 *
-	 * @return array Mining algorithms
-	 */
+        $urls = [
+            "asic" => WHATTOMINE_URL . "/asic.json",
+            "gpu"  => WHATTOMINE_URL . "/coins.json",
+        ];
 
-	public function getAlgorithm(string $device):array
-	    {
-		$algorithms = [];
+        $http = new HTTPclient($urls[$device]);
+        $json = json_decode($http->get(), true);
 
-		$urls = array(
-		    "asic" => WHATTOMINE_URL . "/asic.json",
-		    "gpu"  => WHATTOMINE_URL . "/coins.json",
-		);
+        foreach ($json["coins"] as $name => $currency) {
+            if ($currency["tag"] !== "NICEHASH") {
+                $algorithms[$currency["tag"]] = [
+                    "name"      => $name,
+                    "algorithm" => $currency["algorithm"],
+                    "ticker"    => $currency["tag"],
+                    "device"    => $device,
+                ];
+            } //end if
 
-		$http = new HTTPclient($urls[$device]);
-		$json = json_decode($http->get(), true);
+        } //end foreach
 
-		foreach ($json["coins"] as $name => $currency)
-		    {
-			if ($currency["tag"] !== "NICEHASH")
-			    {
-				$algorithms[$currency["tag"]] = [
-				    "name"      => $name,
-				    "algorithm" => $currency["algorithm"],
-				    "ticker"    => $currency["tag"],
-				    "device"    => $device,
-				];
-			    } //end if
-
-		    } //end foreach
-
-		return $algorithms;
-	    } //end getAlgorithm()
+        return $algorithms;
+    } //end getAlgorithm()
 
 
-    } //end class
-
+} //end class
 
 ?>

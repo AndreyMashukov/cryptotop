@@ -1,6 +1,9 @@
 {
     "name": "andrey-mashukov/cryptotop",
-    "keywords": ["crypto_currency_information", "coinmarketcap_grabber"],
+    "keywords": [
+        "crypto_currency_information",
+        "coinmarketcap_grabber"
+    ],
     "homepage": "https://github.com/AndreyMashukov/cryptotop",
     "description": "Top crypto currencies rating",
     "license": "MIT",
@@ -11,9 +14,11 @@
             "role": "Developer"
         }
     ],
-    "autoload" : {
-        "psr-4" : {
-            "AM\\CryptoTop\\": ["src"]
+    "autoload": {
+        "psr-4": {
+            "AM\\CryptoTop\\": [
+                "src"
+            ]
         },
         "classmap": [
             "src"
@@ -28,9 +33,11 @@
         "ext-libxml": "*",
         "andrey-mashukov/xmlgenerator": "^1.2"
     },
-    "autoload-dev" : {
-        "psr-4" : {
-            "Tests\\": ["tests"]
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": [
+                "tests"
+            ]
         }
     },
     "require-dev": {

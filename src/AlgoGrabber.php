@@ -13,22 +13,20 @@ namespace AM\CryptoTop;
  *
  * @author  Andrey Mashukov <a.mashukoff@gmail.com>
  */
-
 abstract class AlgoGrabber
-    {
+{
 
-	/**
-	 * Get mining algorithm list
-	 *
-	 * @param string $device Type of mining device
-	 *
-	 * @return array Mining algorithms
-	 */
+    /**
+     * Get mining algorithm list
+     *
+     * @param string $device Type of mining device
+     *
+     * @return array Mining algorithms
+     */
 
-	abstract public function getAlgorithm(string $device):array;
+    abstract public function getAlgorithm(string $device): array;
 
 
-    } //end class
-
+} //end class
 
 ?>

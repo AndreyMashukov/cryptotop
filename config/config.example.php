@@ -14,5 +14,4 @@ define("BLOCKCHAIR_URL", "https://api.blockchair.com");
 define("WHATTOMINE_URL", "https://whattomine.com");
 define("FILES_COINMARKETCAP_URL", "https://files.coinmarketcap.com");
 
-
 ?>
