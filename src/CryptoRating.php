@@ -220,7 +220,7 @@ class CryptoRating
         $dom  = new DOMDocument("1.0", "utf-8");
         @$dom->loadHTML($html);
         $xpath = new DOMXPath($dom);
-        $list  = $xpath->query("//img[@class='currency-logo-32x32']/@src");
+        $list  = $xpath->query("//div/h1[@class='text-large']/img/@src");
         $httpclient->setRequest(str_replace("https://files.coinmarketcap.com", FILES_COINMARKETCAP_URL,
             $list[0]->textContent));
 
