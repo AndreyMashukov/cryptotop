@@ -10,7 +10,7 @@ namespace AM\CryptoTop;
 
 use \DOMDocument;
 use \DOMXPath;
-use \Logics\Foundation\HTTP\HTTPclient;
+use \Agentzilla\HTTP\HTTPclient;
 
 /**
  * Abstract algorithms grabber

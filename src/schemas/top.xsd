@@ -28,21 +28,21 @@
 
   <xs:complexType name="CurrencyType">
     <xs:sequence>
-      <xs:element name="ticker"            type="xs:string"       minOccurs="1" maxOccurs="1"/>
-      <xs:element name="name"              type="xs:string"       minOccurs="1" maxOccurs="1"/>
-      <xs:element name="marketcap"         type="PriceValueType"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="price"             type="PriceValueType"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="volume"            type="PriceValueType"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="circulatingsupply" type="PriceValueType"  minOccurs="0" maxOccurs="1"/>
-      <xs:element name="change"            type="ChangeType"      minOccurs="1" maxOccurs="1"/>
-      <xs:element name="image"             type="xs:base64Binary" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="type"              type="TypeType"        minOccurs="1" maxOccurs="1"/>
-      <xs:element name="logo"              type="xs:base64Binary" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="minable"           type="xs:boolean"      minOccurs="0" maxOccurs="1"/>
-      <xs:element name="algorithm"         type="xs:string"       minOccurs="0" maxOccurs="1"/>
-      <xs:element name="device"            type="xs:string"       minOccurs="0" maxOccurs="1"/>
-      <xs:element name="whitepaper"        type="xs:string"       minOccurs="0" maxOccurs="1"/>
-      <xs:element name="sites"             type="SitesType"       minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ticker" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="marketcap" type="PriceValueType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="price" type="PriceValueType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="volume" type="PriceValueType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="circulating_supply" type="PriceValueType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="change" type="ChangeType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="image" type="xs:base64Binary" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="type" type="TypeType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="logo" type="xs:base64Binary" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="minable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="algorithm" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="device" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="whitepaper" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="sites" type="SitesType" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 

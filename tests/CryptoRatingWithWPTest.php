@@ -111,24 +111,6 @@ class CryptoRatingWithWPTest extends TestCase
         $this->assertTrue($cryptorating->validate($rating));
     } //end testShouldAllowToValidateRatingResultsByXmlSchema()
 
-
-    /**
-     * Should allow to validate rating invalid results by XML-Schema
-     *
-     * @return void
-     */
-
-    public function testShouldAllowToValidateRatingInvalidResultsByXmlSchema()
-    {
-        define("FILES_COINMARKETCAP_URL", $this->remotepath . "/datasets/invalidfiles");
-
-        $cryptorating = new CryptoRating();
-        $rating       = $cryptorating->get();
-
-        $this->assertFalse($cryptorating->validate($rating));
-    } //end testShouldAllowToValidateRatingInvalidResultsByXmlSchema()
-
-
 } //end class
 
 ?>

@@ -26,8 +26,8 @@
     },
     "require": {
         "php": ">=7",
-        "logics/http": "*",
-        "logics/sql": "*",
+        "agentzilla/http": "^0.1",
+        "logics/sql": "^0.1",
         "ext-dom": "*",
         "ext-json": "*",
         "ext-libxml": "*",

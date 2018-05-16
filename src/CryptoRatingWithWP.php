@@ -8,10 +8,7 @@
 
 namespace AM\CryptoTop;
 
-use \Exception;
-use \Logics\Foundation\HTTP\HTTPclient;
-use \DOMDocument;
-use \DOMXPath;
+use \Agentzilla\HTTP\HTTPclient;
 
 /**
  * Crypto rating with whitepapers
@@ -53,7 +50,7 @@ class CryptoRatingWithWP extends CryptoRating
     /**
      * Get currency white paper
      *
-     * @param string $currencyname Name of crypto currency
+     * @param string $currency Name of crypto currency
      *
      * @return string URL link to whitepaper
      */
@@ -78,5 +75,3 @@ class CryptoRatingWithWP extends CryptoRating
 
 
 } //end class
-
-?>

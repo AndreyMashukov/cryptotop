@@ -8,8 +8,7 @@
 
 namespace AM\CryptoTop;
 
-use \Exception;
-use \Logics\Foundation\HTTP\HTTPclient;
+use \Agentzilla\HTTP\HTTPclient;
 use \DOMDocument;
 use \DOMXPath;
 use \AdService\XMLGenerator;
@@ -21,7 +20,6 @@ use \AdService\XMLGenerator;
  */
 class CryptoRating
 {
-
     /**
      * Mining algorithms
      *
@@ -46,12 +44,9 @@ class CryptoRating
     /**
      * Get cryptocurrency rating
      *
-     * @param int $count Count of currencies
-     *
      * @return array Rating
      */
-
-    public function get(int $count = 100): array
+    public function get(): array
     {
         $httpclient = new HTTPclient(COINMARKETCAP_URL);
         $html       = $httpclient->get();
@@ -68,7 +63,6 @@ class CryptoRating
      *
      * @return array Data
      */
-
     private function _parseHTML(string $html): array
     {
         $parsed = [];
@@ -99,25 +93,12 @@ class CryptoRating
      *
      * @return string Base64 encoded image
      */
-
     private function _downloadImage(string $image): string
     {
         $http  = new HTTPclient(str_replace("https://files.coinmarketcap.com", FILES_COINMARKETCAP_URL, $image));
         $image = $http->get();
-        if ($image !== "") {
-            $tmp = __DIR__ . "/../tmp/graph.png";
-            file_put_contents($tmp, $image);
 
-            exec('/usr/bin/convert ' . $tmp . ' -fuzz 100% -fill "#54C7FC" -opaque "#EDC240" ' . $tmp);
-            exec('/usr/bin/exiftool -all= ' . $tmp . ' -overwrite_original');
-
-            $content = file_get_contents($tmp);
-            unlink($tmp);
-        } else {
-            $content = "";
-        } //end if
-
-        return base64_encode($content);
+        return base64_encode($image);
     } //end _downloadImage()
 
 
@@ -128,7 +109,6 @@ class CryptoRating
      *
      * @return array Tr element data
      */
-
     protected function readTr(string $tr): array
     {
         $parsed = $this->parseHTML($tr);
@@ -144,7 +124,6 @@ class CryptoRating
      *
      * @return array Parsed data
      */
-
     protected function parseHTML(string $html): array
     {
         $parsed = [];
@@ -193,7 +172,6 @@ class CryptoRating
      *
      * @return bool True or false, minable status
      */
-
     private function _miningCheck(DOMXPath $xpath): bool
     {
         $list = $xpath->query("//td[@class='no-wrap text-right circulating-supply']");
@@ -210,7 +188,6 @@ class CryptoRating
      *
      * @return void
      */
-
     private function _addCoinInfo(DOMXPath $xpath, array &$parsed)
     {
         $list       = $xpath->query("//td[@class='no-wrap currency-name']/a/@href");
@@ -255,7 +232,7 @@ class CryptoRating
 
     public function validate(array $result): bool
     {
-        libxml_use_internal_errors(true);
+        // libxml_use_internal_errors(true);
         $xml = new XMLGenerator("top");
         foreach ($result as $currency) {
             $element = $xml->newElement("currency", "", [], null, true);
@@ -278,5 +255,3 @@ class CryptoRating
 
 
 } //end class
-
-?>
